@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.alik.controllers.RegisterController"
+      style="-fx-background-color: #f4f4f4; -fx-padding: 20px;">
+
+  <children>
+    <Label text="Регистрация" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333;"/>
+
+    <Label text="Логин:" style="-fx-font-size: 16px; -fx-text-fill: #444;"/>
+    <TextField fx:id="loginField" promptText="Введите логин"
+               style="-fx-font-size: 14px; -fx-pref-height: 30px;"/>
+
+    <Label text="Имя:" style="-fx-font-size: 16px; -fx-text-fill: #444;"/>
+    <TextField fx:id="nameField" promptText="Введите имя"
+               style="-fx-font-size: 14px; -fx-pref-height: 30px;"/>
+
+    <Label text="Email:" style="-fx-font-size: 16px; -fx-text-fill: #444;"/>
+    <TextField fx:id="emailField" promptText="Введите email"
+               style="-fx-font-size: 14px; -fx-pref-height: 30px;"/>
+
+    <Label text="Пароль:" style="-fx-font-size: 16px; -fx-text-fill: #444;"/>
+    <PasswordField fx:id="passwordField" promptText="Введите пароль"
+                   style="-fx-font-size: 14px; -fx-pref-height: 30px;"/>
+
+    <Label text="Баланс:" style="-fx-font-size: 16px; -fx-text-fill: #444;"/>
+    <TextField fx:id="balanceField" promptText="Введите начальный баланс"
+               style="-fx-font-size: 14px; -fx-pref-height: 30px;"/>
+
+    <Label fx:id="errorMessage" text="" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+
+    <HBox spacing="10">
+      <children>
+        <Button text="Назад" onAction="#nazad"
+                style="-fx-background-color: #d9534f; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 120px;"/>
+        <Button text="Зарегистрироваться" onAction="#getRegisterButtonAction"
+                style="-fx-background-color: #5cb85c; -fx-text-fill: white; -fx-font-size: 14px; -fx-pref-width: 180px;"/>
+      </children>
+    </HBox>
+
+    <Label fx:id="errorLabel" text="" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+  </children>
+</VBox>

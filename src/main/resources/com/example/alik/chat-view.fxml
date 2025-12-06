@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.alik.controllers.ChatController" spacing="10" padding="10">
+
+    <Label text="Чат" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <ListView fx:id="chatArea" />
+
+    <HBox spacing="10">
+        <TextField fx:id="messageField" promptText="Введите сообщение..." HBox.hgrow="ALWAYS"/>
+        <Button text="Отправить" onAction="#sendMessage"/>
+    </HBox>
+</VBox>

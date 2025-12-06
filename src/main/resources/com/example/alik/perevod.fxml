@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.alik.controllers.TransferController">
+
+    <children>
+        <Label text="Перевод средств" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <Label text="Ваш баланс:" />
+        <Label fx:id="balanceLabel" text="" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+
+        <Label text="Выберите получателя:" />
+        <ChoiceBox fx:id="recipientDropdown"/>
+
+        <Label text="Сумма перевода:" />
+        <TextField fx:id="amountField" promptText="Введите сумму"/>
+
+        <Label fx:id="sanEngiz" text="" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+        <Label fx:id="akwaJok" text="" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+
+        <Button fx:id="sendButton" text="Отправить" onAction="#transferButton"/>
+        <Label fx:id="perevodJasaldy" text="" style="-fx-text-fill: red; -fx-font-size: 14px;"/>
+        <Button text="Назад" onAction="#nazad" /> <!-- Добавленная кнопка -->
+    </children>
+</VBox>
